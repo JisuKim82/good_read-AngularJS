@@ -11,7 +11,7 @@
       <div class="col-sm-9">
         <h3>
           <a href="http://www.amazon.com/gp/product/{{book.isbn}}">
-            <img ng-src="http://images.amazon.com/images/P/{{book.isbn}}.01.ZTZZZZZZ.jpg" alt="Cover of Book" class="full">
+            {{book.title}}
           </a>
         </h3>
         
@@ -20,11 +20,6 @@
         <p>{{book.review}}</p>
 
         <book-genres></book-genres>
-        <ul class='list-unstyled'>
-          <li>
-            <span class='label label-primary' ng-repeat='(genre,state) in book.genres' ng-show='state'>{{genre}}</span>
-          </li>
-        </ul>
 
       </div>
     </li>
