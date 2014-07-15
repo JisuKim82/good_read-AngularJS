@@ -8,6 +8,13 @@ var app = angular.module('readingList', []);
   app.controller('ReadingListController', function(){
     this.books = books;
     this.genres = genres;
+  });
+
+  app.directive('bookGenres', function() {
+    return {
+      restrict: 'E',
+      templateURL: 'partials/book-genres.html'
+    }
   }); 
 
   var genres = [ 'fable', 'fantasy', 'fiction', 'folklore', 'horror', 'humor', 'legend', 'metafiction', 'mystery', 'mythology', 'non-fiction', 'poetry' ];
