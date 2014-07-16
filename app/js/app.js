@@ -31,6 +31,13 @@ var app = angular.module('readingList', []);
       templateUrl: "partials/review-form.html",
       controller: function(){
         this.showForm = false;
+        this.book = {genres:{}};
+        this.addReview = function(form, book){
+          books.push(book);
+          this.book = {genres:{}};
+
+          form.$setPristine();
+        }
       },
       controllerAs: 'reviewFormCtrl',
       scope: {
